@@ -1,30 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Helicopter.java                                    :+:      :+:    :+:   */
+/*   Aircraft.java                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arangari <arangari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/26 11:40:02 by arangari          #+#    #+#             */
-/*   Updated: 2018/06/27 16:29:39 by arangari         ###   ########.fr       */
+/*   Created: 2018/06/26 11:50:42 by arangari          #+#    #+#             */
+/*   Updated: 2018/07/02 11:32:16 by arangari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 package Vehicles;
 
-public class Helicopter extends Aircraft implements Flyable
+public class Aircraft
 {
-	WeatherTower weatherTower;
+	public long id;
+	protected string name;
+	protected Coordinates coordinates;
+	private static long idCounter = 1;
 
-	public updateConditions()
+	protected Aircraft(String name, Coordinates coordinates)
 	{
-		return Void;
+		this.name = name;
+		this.coordinates = coordinates;
+		this.id = nextId();
 	}
 
-	public registerTower(WeatherTower weatherTower)
+	private long nextId()
 	{
-		return Void;
+		Aircraft.idCounter += 1;
+		return (Aircraft.idCounter);
 	}
-	
-
 }
+
+/*
+	This class handles the aircraft and weather simulation
+ */

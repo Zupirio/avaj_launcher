@@ -6,11 +6,11 @@
 /*   By: arangari <arangari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/26 17:12:37 by arangari          #+#    #+#             */
-/*   Updated: 2018/07/02 17:35:32 by arangari         ###   ########.fr       */
+/*   Updated: 2018/07/03 16:03:48 by arangari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// package ro.academy.avaj.weather;
+package weather;
 
 public class WeatherProvider
 {
@@ -27,7 +27,13 @@ public class WeatherProvider
 
 	public String getCurrentWeather(Coordinates coordinates)
 	{
-		int	weatherOption = coordinates.getHeight() + coordinates.getLatitude() + coordinates.getLongitude();
-		return weather[weatherOption % 4];
+		int	weatherOption = 0;
+		if (coordinates.getLatitude() > 23)
+		weatherOption++;
+		if (coordinates.getLongitude() > 30)
+		weatherOption++;
+		if (coordinates.getHeight() > 20)
+			weatherOption++;
+		return weather[weatherOption];
 	}
 }

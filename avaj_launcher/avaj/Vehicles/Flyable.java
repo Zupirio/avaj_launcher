@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   JetPlane.java                                      :+:      :+:    :+:   */
+/*   Flyable.java                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arangari <arangari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/26 11:40:22 by arangari          #+#    #+#             */
-/*   Updated: 2018/06/27 18:13:03 by arangari         ###   ########.fr       */
+/*   Created: 2018/06/26 17:08:23 by arangari          #+#    #+#             */
+/*   Updated: 2018/07/02 14:28:55 by arangari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-package Vehicles;
+// package	ro.academy.avaj.simulator.Vehicles;
 
-
-public class JetPlane extends Aircraft implements Flyable
+public class Flyable
 {
-	WeatherTower weatherTower;
-
-	JetPlane(String name, Coordinates coordinates)
-	{}
-
 	public void updateConditions()
 	{
-
+		
 	}
-
-	public void registerTower(WeatherTower weatherTower)
+	public void registerTower(WeatherTower WeatherTower)
 	{
 
 	}
+
 }

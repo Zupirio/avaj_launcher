@@ -1,41 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Coordinates.java                                   :+:      :+:    :+:   */
+/*   WeatherTower.java                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arangari <arangari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/26 17:12:21 by arangari          #+#    #+#             */
-/*   Updated: 2018/06/27 17:38:30 by arangari         ###   ########.fr       */
+/*   Created: 2018/06/27 09:17:49 by arangari          #+#    #+#             */
+/*   Updated: 2018/07/03 16:03:31 by arangari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+package simulator;
 
-public class Coordinates
+import weather.Coordinates;
+
+public class WeatherTower extends Tower
 {
-	private int	height;
-	private int	longitude;
-	private int	latitude;
-
-	Coordinates(int longitude, int latitude, int height)
+	public String getWeather(Coordinates coordinates)
 	{
-		this.height = height;
-		this.latitude = latitude;
-		this.longitude = longitude;
-
+		return coordinates;
 	}
 
-	public	getHeight()
+	public void changeWeather()
 	{
-	return height;
-	}
-	public	getLongitude()
-	{
-		return longitude;
-	}
-	public	getLatitude()
-	{
-		return latitude;
-	}
 
+	}
 }
