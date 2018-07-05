@@ -22,7 +22,7 @@ public class WriteFile
 			{
 				writeFile = new WriteFile();
 				file = new File("simulator.txt");
-				fileWriter = new FileWriter(file);
+				fileWriter = new FileWriter(String.valueOf(file));
 				bufferedWriter = new BufferedWriter(fileWriter);
 			}
 			catch (Exception e)

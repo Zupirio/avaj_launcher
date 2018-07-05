@@ -6,7 +6,7 @@
 /*   By: arangari <arangari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/26 11:40:43 by arangari          #+#    #+#             */
-/*   Updated: 2018/07/03 11:48:11 by arangari         ###   ########.fr       */
+/*   Updated: 2018/07/05 15:02:48 by arangari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ import com.sun.corba.se.impl.protocol.giopmsgheaders.Message;
 import ro.academy.avaj.simulator.*;
 import ro.academy.avaj.simulator.Tower;
 import simulator.WeatherTower;
+import simulator.WriteFile;
 import weather.Coordinates;
 
 public class Baloon extends Aircraft implements Flyable
@@ -56,12 +57,16 @@ public class Baloon extends Aircraft implements Flyable
 		{
 			return coordinates.updateCoordinates(0, 0, -15);
 		}
+
+		WriteFile.getWriteFile().writeToFile()("Baloon#" + this.name + " (" + this.id + ")" + messageshMap.get(weatherType));
+		if (this.coordinates.)
 	}
 
 	public void registerTower(WeatherTower weatherTower)
 	{
 		this.weatherTower = weatherTower;
 		weatherTower.register(this);
-		
+		WriteFile.getWriteFile().writeToFile("Tower says: Baloon#" + this.name + " (" + this.id + " (" + "is registered to weather tower.");
+
 	}
 }
