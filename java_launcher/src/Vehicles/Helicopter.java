@@ -6,11 +6,13 @@
 /*   By: arangari <arangari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/26 11:40:02 by arangari          #+#    #+#             */
-/*   Updated: 2018/07/01 17:34:58 by arangari         ###   ########.fr       */
+/*   Updated: 2018/07/10 18:26:23 by arangari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 package Vehicles;
+
+import simulator.WriteFile;
 
 public class Helicopter extends Aircraft implements Flyable
 {
@@ -23,12 +25,45 @@ public class Helicopter extends Aircraft implements Flyable
 
 	public updateConditions()
 	{
-		return Void;
+		String weatherType = this.weatherTower.getWeather(this.coordinates);
+		HashMap<String, String> messageshMap = new HashMap<String, String>();
+		messageshMap.put("SUN", "Fine weather in tha Helicopter");
+		messageshMap.put("RAIN", "Brrr... Slashing the rain with my blades.");
+		messageshMap.put("SNOW", "Aint no snow that can touch me!!");
+		messageshMap.put("FOG", "Fog and copter dont go together");
+
+		if (messageshMap.equals("SUN"))
+		{
+			this.coordinates = new Coordinates(coordinates.getLongitude() + 10, coordinates.getLatitude(), coordinates.getHeight() + 2);
+		}
+		if(messageshMap.equals("RAIN"))
+		{
+			this.coordinates = new Coordinates(coordinates.getLongitude() + 5, coordinates.getLatitude() + 0, coordinates.getHeight() + 0);
+		}
+		if(messageshMap.equals("SNOW"))
+		{
+			this.coordinates = new Coordinates(coordinates.getLongitude() + 1, coordinates.getLatitude() + 0, coordinates.getHeight() + 0);
+		}
+		if(messageshMap.equals("FOG"))
+		{
+			this.coordinates = new Coordinates(coordinates.getLongitude() + 0, coordinates.getLatitude() + 0, coordinates.getHeight() -12);
+		}
+
+		WriteFile.getWriteFile().writeToFile("Helicopter#" + this.name + " (" + this.id + ")" + messageshMap.get(weatherType));
+		if (this.coordinates.getHeight() == 0)
+		{
+				WriteFile.getWriteFile().writeToFile("Helicopter#" + this.name + " (" + this.id + "): landing. ");
+				this.weatherTower.unregister(this);
+				WriteFile.getWriteFile().writeToFile("Helicopter#" + this.name + " (" + this.id + ")" + "Says unregistered from Tower.");
+
+		}
 	}
 
 	public registerTower(WeatherTower weatherTower)
 	{
-		return Void;
+		this.weatherTower = weatherTower;
+		weatherTower.register(this);
+		WriteFile.getWriteFile.writeToFile("Tower says: Helicopter#" + this.name + " (" + this.id + ") " + " (" + "is registered to tower.)" );
 	}
 
 

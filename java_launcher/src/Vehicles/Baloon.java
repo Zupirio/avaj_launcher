@@ -6,7 +6,7 @@
 /*   By: arangari <arangari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/26 11:40:43 by arangari          #+#    #+#             */
-/*   Updated: 2018/07/05 15:02:48 by arangari         ###   ########.fr       */
+/*   Updated: 2018/07/10 18:26:17 by arangari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,30 +43,36 @@ public class Baloon extends Aircraft implements Flyable
 
 		if (messageshMap.equals("SUN"))
 		{
-			return coordinates.updateCoordinates(0, +2, +4);
+			this.coordinates = new Coordinates(coordinates.getLongitude() + 2, coordinates.getLatitude(), coordinates.getHeight() + 4);
 		}
 		if(messageshMap.equals("RAIN"))
 		{
-			return coordinates.updateCoordinates(0, 0, -5);
+			this.coordinates = new Coordinates(coordinates.getLongitude() + 0, coordinates.getLatitude() + 0, coordinates.getHeight() -5);
 		}
 		if(messageshMap.equals("SNOW"))
 		{
-			return coordinates.updateCoordinates(0, 0, -3);
+			this.coordinates = new Coordinates(coordinates.getLongitude() + 0, coordinates.getLatitude() + 0, coordinates.getHeight() -3);
 		}
 		if(messageshMap.equals("FOG"))
 		{
-			return coordinates.updateCoordinates(0, 0, -15);
+			this.coordinates = new Coordinates(coordinates.getLongitude() + 0, coordinates.getLatitude() + 0, coordinates.getHeight() -15);
 		}
 
-		WriteFile.getWriteFile().writeToFile()("Baloon#" + this.name + " (" + this.id + ")" + messageshMap.get(weatherType));
-		if (this.coordinates.)
+		WriteFile.getWriteFile().writeToFile("Baloon#" + this.name + " (" + this.id + ")" + messageshMap.get(weatherType));
+		if (this.coordinates.getHeight() == 0)
+		{
+				WriteFile.getWriteFile().writeToFile("Baloon#" + this.name + " (" + this.id + "): landing. ");
+				this.weatherTower.unregister(this);
+				WriteFile.getWriteFile().writeToFile("Baloon#" + this.name + " (" + this.id + ")" + "Says unregistered from Tower.");
+
+		}
 	}
 
 	public void registerTower(WeatherTower weatherTower)
 	{
 		this.weatherTower = weatherTower;
 		weatherTower.register(this);
-		WriteFile.getWriteFile().writeToFile("Tower says: Baloon#" + this.name + " (" + this.id + " (" + "is registered to weather tower.");
+		WriteFile.getWriteFile().writeToFile("Tower says: Baloon#" + this.name + " (" + this.id + " )" + "is registered to weather tower.");
 
 	}
 }
