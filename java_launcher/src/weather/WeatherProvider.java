@@ -22,7 +22,7 @@ public class WeatherProvider
 
 	public static WeatherProvider getProvider()
 	{
-		return weatherProvider;
+		return WeatherProvider.weatherProvider;
 	}
 
 	public String getCurrentWeather(Coordinates coordinates)
