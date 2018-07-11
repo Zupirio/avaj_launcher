@@ -15,10 +15,6 @@ package Vehicles;
 
 import java.util.HashMap;
 
-import com.sun.corba.se.impl.protocol.giopmsgheaders.Message;
-
-import ro.academy.avaj.simulator.*;
-import ro.academy.avaj.simulator.Tower;
 import simulator.WeatherTower;
 import simulator.WriteFile;
 import weather.Coordinates;

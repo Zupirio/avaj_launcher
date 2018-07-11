@@ -10,8 +10,6 @@ package Vehicles;/* ************************************************************
 /*                                                                            */
 /* ************************************************************************** */
 
-// package	ro.academy.avaj.simulator.Vehicles;
-
 import simulator.WeatherTower;
 
 public interface Flyable

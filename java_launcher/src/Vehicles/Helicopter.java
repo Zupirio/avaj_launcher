@@ -12,7 +12,11 @@
 
 package Vehicles;
 
+import simulator.WeatherTower;
 import simulator.WriteFile;
+import weather.Coordinates;
+
+import java.util.HashMap;
 
 public class Helicopter extends Aircraft implements Flyable
 {
@@ -23,7 +27,7 @@ public class Helicopter extends Aircraft implements Flyable
 		super(name, coordinates);
 	}
 
-	public updateConditions()
+	public void updateConditions()
 	{
 		String weatherType = this.weatherTower.getWeather(this.coordinates);
 		HashMap<String, String> messageshMap = new HashMap<String, String>();
@@ -34,7 +38,7 @@ public class Helicopter extends Aircraft implements Flyable
 
 		if (messageshMap.equals("SUN"))
 		{
-			this.coordinates = new Coordinates(coordinates.getLongitude() + 10, coordinates.getLatitude(), coordinates.getHeight() + 2);
+			this.coordinates = new Coordinates(coordinates.getLongitude() + 10, coordinates.getLatitude() + 0, coordinates.getHeight() + 2);
 		}
 		if(messageshMap.equals("RAIN"))
 		{
@@ -59,12 +63,11 @@ public class Helicopter extends Aircraft implements Flyable
 		}
 	}
 
-	public registerTower(WeatherTower weatherTower)
+	public void registerTower(WeatherTower weatherTower)
 	{
 		this.weatherTower = weatherTower;
 		weatherTower.register(this);
-		WriteFile.getWriteFile.writeToFile("Tower says: Helicopter#" + this.name + " (" + this.id + ") " + " (" + "is registered to tower.)" );
+		WriteFile.getWriteFile().writeToFile("Tower says: Helicopter#" + this.name + " (" + this.id + ") " + " (" + "is registered to tower.)" );
 	}
-
 
 }

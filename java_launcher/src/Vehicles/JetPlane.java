@@ -12,6 +12,12 @@
 
 package Vehicles;
 
+import simulator.WeatherTower;
+import simulator.WriteFile;
+import weather.Coordinates;
+
+import java.util.HashMap;
+
 public class JetPlane extends Aircraft implements Flyable
 {
 	WeatherTower weatherTower;
@@ -26,9 +32,9 @@ public class JetPlane extends Aircraft implements Flyable
 		String weatherType = this.weatherTower.getWeather(this.coordinates);
 		HashMap<String, String> messageshMap = new HashMap<String, String>();
 		messageshMap.put("SUN", "Fine weather in tha JetPlane");
-		messageshMap.put("RAIN", "Shhh... Flying through this rain like I'm slice man .");
+		messageshMap.put("RAIN", "Flying through this rain like I'm slice man .");
 		messageshMap.put("SNOW", "Got snow as my dust!!");
-		messageshMap.put("FOG", "Totally need sonic vision to se through this.");
+		messageshMap.put("FOG", "Totally need sonic vision to see through this.");
 
 		if (messageshMap.equals("SUN"))
 		{
