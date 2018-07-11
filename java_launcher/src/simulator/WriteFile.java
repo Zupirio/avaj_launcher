@@ -1,8 +1,8 @@
 package simulator;
 
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
-import com.sun.java.util.jar.pack.Package.File;
 
 public class WriteFile
 {
