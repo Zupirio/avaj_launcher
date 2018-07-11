@@ -17,6 +17,8 @@ import weather.*;
 
 import java.io.*;
 import java.util.*;
+import java.lang.*;
+import java.lang.String;
 
 
 /**
@@ -29,8 +31,6 @@ public class Simulation
 
 	private static void main(String[] args) throws InterruptedException
 	{
-		AircraftFactory aircraftFactory = new AircraftFactory(); //
-		Flyable aircraft = null; //
 		try
 		{
 			BufferedReader reader = new BufferedReader(new FileReader(args[0]));
@@ -44,18 +44,19 @@ public class Simulation
 					System.out.println("Invalid simulation count" + simulations);
 					System.exit(1);
 				}
-				while (line = reader.readLine() != null)
+				while ((line = reader.readLine()) != null)
 				{
-					Flyable flyable = Aircraft.newAircraft(line.split(" ")[0], line.split(" ") [1],
+					Flyable flyable = AircraftFactory.newAircraft(line.split(" ")[0], line.split(" ") [1],
 							Integer.parseInt(line.split(" ")[2]), Integer.parseInt(line.split(" ")[3]),
 							Integer.parseInt(line.split(" ")[4]));
-					flyable.add(flyable);
+					if (flyable != null)
+						flyables.add(flyable);
 				}
-				for (flyables flyable : flyables)
+				for (Flyable flyable : flyables)
 				{
-					flyables.registerTower(weatherTower);
+					flyable.registerTower(weatherTower);
 				}
-				for (int i = 1; 1 <= simulations; i++)
+				for (int i = 1; i <= simulations; i++)
 				{
 					weatherTower.changeWeather();
 				}
