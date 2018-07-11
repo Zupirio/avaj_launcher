@@ -12,15 +12,11 @@
 
 package Vehicles;
 
-import simulator.WeatherTower;
+import simulator.*;
+import weather.*;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.logging.Logger;
+import java.io.*;
+import java.util.*;
 
 
 /**
@@ -79,7 +75,8 @@ public class Simulation
 		}
 		finally
 		{
-			Logger.getLogger("testing").clone();
+			WriteFile.getWriteFile().close();
+			System.out.println("scanner closed\n");
 		}
 	}
 }
