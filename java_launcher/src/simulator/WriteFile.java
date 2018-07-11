@@ -26,7 +26,9 @@ public class WriteFile
 				bufferedWriter = new BufferedWriter(fileWriter);
 			}
 			catch (Exception e)
-			{}
+			{
+				System.err.println("Cant't write to file" + e);
+			}
 		}
 		return writeFile;
 	}
