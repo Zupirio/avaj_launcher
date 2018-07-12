@@ -3,6 +3,7 @@ package simulator;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
+import java.io.IOException;
 
 public class WriteFile
 {
@@ -43,6 +44,19 @@ public class WriteFile
 		catch (Exception e)
 		{
 			System.out.println("Can't close BufferedWriter\n" + e);
+		}
+	}
+
+	public void close()
+	{
+		try
+		{
+			if (bufferedWriter != null)
+				bufferedWriter.close();
+		}
+		catch (IOException e)
+		{
+			System.out.println("Error writing to BufferedWrite\n" + e);
 		}
 	}
 }
