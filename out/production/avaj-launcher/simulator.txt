@@ -1,0 +1,28 @@
+Tower says: Baloon#B1 (2 )is registered to weather tower.
+Tower says: Baloon#B2 (3 )is registered to weather tower.
+Tower says: Helicopter#H1 (4)  (is registered to tower.)
+Tower says: Helicopter#H2 (5)  (is registered to tower.)
+Tower says: Helicopter#H3 (6)  (is registered to tower.)
+Tower says: Baloon#B3 (7 )is registered to weather tower.
+Tower says: Helicopter#H4 (8)  (is registered to tower.)
+Baloon#B1 (2)Brrr... Rain getting in from the sides.
+Baloon#B1 (2): landing. 
+Baloon#B1 (2)Says unregistered from Tower.
+Helicopter#H1 (4)Brrr... Slashing the rain with my blades.
+Helicopter#H1 (4): landing. 
+Helicopter#H1 (4)Says unregistered from Tower.
+Helicopter#H3 (6)Brrr... Slashing the rain with my blades.
+Helicopter#H3 (6): landing. 
+Helicopter#H3 (6)Says unregistered from Tower.
+Helicopter#H4 (8)Brrr... Slashing the rain with my blades.
+Helicopter#H4 (8): landing. 
+Helicopter#H4 (8)Says unregistered from Tower.
+Baloon#B2 (3)Brrr... Rain getting in from the sides.
+Baloon#B2 (3): landing. 
+Baloon#B2 (3)Says unregistered from Tower.
+Baloon#B3 (7)Brrr... Rain getting in from the sides.
+Baloon#B3 (7): landing. 
+Baloon#B3 (7)Says unregistered from Tower.
+Helicopter#H2 (5)Brrr... Slashing the rain with my blades.
+Helicopter#H2 (5): landing. 
+Helicopter#H2 (5)Says unregistered from Tower.

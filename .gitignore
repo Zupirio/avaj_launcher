@@ -1,1 +1,16 @@
 src/.DS_Store
+out/production/avaj-launcher/vehicles/AircraftFactory.class
+out/production/avaj-launcher/Interface/Flyable.class
+out/production/avaj-launcher/simulator/Simulation.class
+out/production/avaj-launcher/simulator/WriteFile.class
+out/production/avaj-launcher/vehicles/Aircraft.class
+out/production/avaj-launcher/vehicles/Baloon.class
+out/production/avaj-launcher/vehicles/Coordinates.class
+out/production/avaj-launcher/vehicles/Helicopter.class
+out/production/avaj-launcher/vehicles/JetPlane.class
+out/production/avaj-launcher/weather/Tower.class
+out/production/avaj-launcher/weather/WeatherProvider.class
+out/production/avaj-launcher/weather/WeatherTower.class
+out/production/avaj-launcher/.]
+.gitignore
+.gitignore
