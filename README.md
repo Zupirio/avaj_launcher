@@ -20,10 +20,8 @@ Make sure you have Java installed on your machine. If you don't follow this [lin
 ### Prerequisites
 
 [Java](https://www.java.com/en/)
-[Visual Studio Code](https://code.visualstudio.com/) or your favorite IDE/terminal
 
-```
-```
+[Visual Studio Code](https://code.visualstudio.com/) or your favorite IDE/terminal
 
 ### Installing
 
@@ -72,10 +70,9 @@ This project is licensed under the MIT License - see the [LICENSE.md](https://op
 
 **I'd like to thank the Lord for His grace and mercy. Thank You Lord for Your abundant blessings🙌🏾 🙌🏾**
 
-*
 * [Kmodipa](https://github.com/kmodipa)
 * [Fthwala](https://github.com/fthwala)
 
 ## Contact
 
-*[Zupirio](twitter.com/zupirio)
+[Zupirio](twitter.com/zupirio)
